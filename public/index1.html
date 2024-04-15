@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="min-h-screen m-0 text-base text-white flex items-center justify-around">
+    <div class="w-[500px] p-5 min-h-24 bg-white shadow-md rounded-2xl">
+        <div class="bg-[#0b58a7] w-full text-white flex justify-between py-4 px-5 rounded-2xl text-xl">
+            <span>Score: <span id="score">0</span></span>
+            <span id="countdown">0</span>
+        </div>
+        <div class="">
+            <div class="active qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">Hello, what ______ your name?</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a1">
+                    <span class="block px-4 py-2">
+                        A) is
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a1">
+                    <span class="block px-4 py-2">
+                        B) are
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a1">
+                    <span class="block px-4 py-2">
+                        C) am
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a1">
+                    <span class="block px-4 py-2">
+                        D) be
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">______ name is John. And my ______ is Johnson.
+                </h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a2">
+                    <span class="block px-4 py-2">
+                        A) Your / surname
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a2">
+                    <span class="block px-4 py-2">
+                        B) My / surname
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a2">
+                    <span class="block px-4 py-2">
+                        C) I / surname
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a2">
+                    <span class="block px-4 py-2">
+                        D) I / name
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">My name is Lisa. ______ Lisa Peterson.</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a3">
+                    <span class="block px-4 py-2">
+                        A) My am
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a3">
+                    <span class="block px-4 py-2">
+                        B) I is
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a3">
+                    <span class="block px-4 py-2">
+                        C) I am
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a3">
+                    <span class="block px-4 py-2">
+                        D) I
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold"> ______ name is Apple. ______ Ann Apple.</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a4">
+                    <span class="block px-4 py-2">
+                        A) His / She
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a4">
+                    <span class="block px-4 py-2">
+                        B) His / He’s
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a4">
+                    <span class="block px-4 py-2">
+                        C) Her / She’s
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a4">
+                    <span class="block px-4 py-2">
+                        D) His / His
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">“Where ______ John from?” “______ from the US.”</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a5">
+                    <span class="block px-4 py-2">
+                        A) is / He’s
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a5">
+                    <span class="block px-4 py-2">
+                        B) is / His
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a5">
+                    <span class="block px-4 py-2">
+                        C) am / He’s
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a5">
+                    <span class="block px-4 py-2">
+                        D) is / She’s
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">______ are you from? Japan.</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a6">
+                    <span class="block px-4 py-2">
+                        A) What
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a6">
+                    <span class="block px-4 py-2">
+                        B) Who
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a6">
+                    <span class="block px-4 py-2">
+                        C) Where
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a6">
+                    <span class="block px-4 py-2">
+                        D) When
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">Where ______ you ______ ?</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a7">
+                    <span class="block px-4 py-2">
+                        A) is / from
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a7">
+                    <span class="block px-4 py-2">
+                        B) are / in
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a7">
+                    <span class="block px-4 py-2">
+                        C) are / is
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a7">
+                    <span class="block px-4 py-2">
+                        D) are / from
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">______ from Spain. I’m Rodriguez .</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a8">
+                    <span class="block px-4 py-2">
+                        A) I’m
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a8">
+                    <span class="block px-4 py-2">
+                        B) He’s
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a8">
+                    <span class="block px-4 py-2">
+                        C) You’re
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a8">
+                    <span class="block px-4 py-2">
+                        D) She’s
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">Pierre is a French boy. ______ from ______ .</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a9">
+                    <span class="block px-4 py-2">
+                        A) He’s / France
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a9">
+                    <span class="block px-4 py-2">
+                        B) His / France
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a9">
+                    <span class="block px-4 py-2">
+                        C) His’s / French
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a9">
+                    <span class="block px-4 py-2">
+                        D) He / France
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">Lisa and Max are Americans. ______ from U.S.A.</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a10">
+                    <span class="block px-4 py-2">
+                        A) There
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a10">
+                    <span class="block px-4 py-2">
+                        B) Their
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a10">
+                    <span class="block px-4 py-2">
+                        C) They’re
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a10">
+                    <span class="block px-4 py-2">
+                        D) Their’re
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold"> “What ____ their _____?” <br>
+                    “Alexander and Philip.”</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a11">
+                    <span class="block px-4 py-2">
+                        A) are/name
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a11">
+                    <span class="block px-4 py-2">
+                        B) is / name
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a11">
+                    <span class="block px-4 py-2">
+                        C) is / names
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a11">
+                    <span class="block px-4 py-2">
+                        D) are / names
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">I ______ 22 years old, but Andrew ______ 20.</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a12">
+                    <span class="block px-4 py-2">
+                        A) am / am
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a12">
+                    <span class="block px-4 py-2">
+                        B) are / am
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a12">
+                    <span class="block px-4 py-2">
+                        C) am / is
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a12">
+                    <span class="block px-4 py-2">
+                        D) are / are
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">Mark______ 19, but Brian and Denis ______ 26 and 28.
+                </h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a13">
+                    <span class="block px-4 py-2">
+                        A) is / are
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a13">
+                    <span class="block px-4 py-2">
+                        B) are / is
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a13">
+                    <span class="block px-4 py-2">
+                        C) are / are
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a13">
+                    <span class="block px-4 py-2">
+                        D) am / are
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">“What ______ this?” <br>
+                    “It’s ______ umbrella.”</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a14">
+                    <span class="block px-4 py-2">
+                        A) are / a
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a14">
+                    <span class="block px-4 py-2">
+                        B) is / a
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a14">
+                    <span class="block px-4 py-2">
+                        C) is / an
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a14">
+                    <span class="block px-4 py-2">
+                        D) its / an
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">Oxford is ______ English university.</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        valid="valid" type="radio" name="a15">
+                    <span class="block px-4 py-2">
+                        A) an
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a15">
+                    <span class="block px-4 py-2">
+                        B) the
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a15">
+                    <span class="block px-4 py-2">
+                        C) a
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <input id="z-10"
+                        class="opacity-0 absolute top-0 left-0 w-full h-full z-10 cursor-pointer checked:bg-red-500"
+                        type="radio" name="a15">
+                    <span class="block px-4 py-2">
+                        D) *
+                    </span>
+                </div>
+            </div>
+            <div class="hidden qa_set text-center">
+                <h4 class="mr-4 text-black py-3 text-2xl font-bold">Siz <span class="totalScore">0
+                        to'pladingiz</span>100
+                    baldan</h4>
+            </div>
+        </div>
+        <div class="pl-2.5 text-right">
+            <span
+                class="inline-block py-2 px-5 bg-[#0b58a7] text-white rounded-2xl cursor-pointer transition-all hover:bg-[#064484]"
+                id="skip">Skip</span>
+        </div>
+        <div class="pl-2.5 text-right">
+            <a href="start.html"
+                class="hidden py-2 px-5 bg-[#0b58a7] text-white rounded-2xl cursor-pointer transition-all hover:bg-[#064484]"
+                id="skip1">Boshiga</a>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

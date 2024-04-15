@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.active {
+    display: block;
+}
+
+input[valid]:checked+span {
+    background-color: green !important;
+    color: #fff !important;
+    /* display: none !important; */
+}
+
+input:checked+span {
+    background-color: red !important;
+    border-radius: 15px;
+}
+
+body {
+    background: rgb(0, 215, 255);
+    background: linear-gradient(40deg, rgba(0, 215, 255, 1) 37%, rgba(23, 217, 35, 1) 67%);
+}
