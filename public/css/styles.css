@@ -523,6 +523,10 @@ video {
   margin-left: auto;
   margin-right: auto;
 }
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -756,6 +760,10 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -823,6 +831,8 @@ input:checked+span {
 body {
     background: rgb(0, 215, 255);
     background: linear-gradient(40deg, rgba(0, 215, 255, 1) 37%, rgba(23, 217, 35, 1) 67%);
+    /* background: rgb(1, 53, 221);
+    background: linear-gradient(40deg, rgba(1, 53, 221, 1) 37%, rgba(23, 217, 35, 1) 67%); */
 }
 
 .checked\:bg-red-500:checked {
@@ -897,8 +907,22 @@ body {
     line-height: 1.75rem;
   }
 
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .md\:font-black {
     font-weight: 900;
+  }
+
+  .md\:font-bold {
+    font-weight: 700;
   }
 
   .md\:leading-7 {
@@ -923,4 +947,4 @@ body {
   .lg\:gap-4 {
     gap: 1rem;
   }
-}
+}   

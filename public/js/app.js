@@ -8,7 +8,8 @@ var scoreCount = 0;
 var duration = 0;
 var qaSet = document.querySelectorAll(".qa_set")
 var qaAnsRow = document.querySelectorAll("#qa_ans_row")
-
+var box = document.querySelector("#box")
+console.log(box.length);
 skip.addEventListener('click', function () {
     step();
     duration = 10;
@@ -38,7 +39,7 @@ function step() {
         qaSet[i].className = 'hidden'
     }
     qaSet[count].className = 'qa_set block'
-    if (count == 9) {
+    if (count == 15) {
         skip.style.display = 'none'
         skip1.style.display = 'inline-block'
         clearInterval(durationTime)

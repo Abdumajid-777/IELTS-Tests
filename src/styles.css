@@ -21,4 +21,6 @@ input:checked+span {
 body {
     background: rgb(0, 215, 255);
     background: linear-gradient(40deg, rgba(0, 215, 255, 1) 37%, rgba(23, 217, 35, 1) 67%);
-}
+    /* background: rgb(1, 53, 221);
+    background: linear-gradient(40deg, rgba(1, 53, 221, 1) 37%, rgba(23, 217, 35, 1) 67%); */
+}   
