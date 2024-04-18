@@ -1,7 +1,7 @@
 const quizData = [
     {
         id: 1,
-        question: "(Hello, what ______ your name?",
+        question:"Hello, what ______ your name?",
         a: "is",
         b: "are",
         c: "am",
@@ -10,7 +10,7 @@ const quizData = [
     },
     {
         id: 2,
-        question: "______ name is John. And my ______ is Johnson.",
+        question:"______ name is John. And my ______ is Johnson.",
         a: "Your / surname",
         b: "My / surname",
         c: "I / surname",
@@ -19,7 +19,7 @@ const quizData = [
     },
     {
         id: 3,
-        question: " My name is Lisa. ______ Lisa Peterson.",
+        question: "My name is Lisa. ______ Lisa Peterson.",
         a: "My am",
         b: "I is",
         c: "I am",
