@@ -79,7 +79,7 @@ faq.forEach(function (item, index, arr) {
             <h1 id="text-base" class="text-sm md:text-2xl text-black md:semi-bold capitalize mb-4 md:mb-6 md:flex gap-2 justify-center items-center">Siz <span
                     class="font-bold color active2">${testNumber + 1}</span> Ta Dan <span class="font-bold color active">${testNumber1}</span> Taga Javob Topdingiz
             </h1>
-            <p id="text-base" class="text-black md:text-3xl mb-4 text-xl font-bold capitalize">Darajangiz Beginner Emas 🤥</p >
+            <p id="text-base" class="text-black md:text-3xl mb-4 text-xl font-bold capitalize">Darajangiz INTERMEDIATE Emas 🤥</p >
             <div class="pl-2.5 text-center mt-4">
                 <a href="index.html"
                     class="py-2 px-5 bg-[#0b58a7] text-white rounded-2xl cursor-pointer transition-all hover:bg-[#064484]"
@@ -92,7 +92,7 @@ faq.forEach(function (item, index, arr) {
             <h1 id="text-base" class="text-sm md:text-2xl text-black md:semi-bold capitalize mb-4 md:mb-6 md:flex gap-2 justify-center items-center">Siz <span
                     class="font-bold color active2">${testNumber + 1}</span> Ta Dan <span class="font-bold color active">${testNumber1}</span> Taga Javob Topdingiz
             </h1>
-            <p id="text-base" class="text-black md:text-3xl mb-5 text-xl font-bold capitalize">Darajangiz Beginner 😎</p >
+            <p id="text-base" class="text-black md:text-3xl mb-5 text-xl font-bold capitalize">Darajangiz INTERMEDIATE 😎</p >
             <div class="pl-2.5 text-center mt-4">
                 <a href="index.html"
                     class="py-2 px-5 bg-[#0b58a7] text-white rounded-2xl cursor-pointer transition-all hover:bg-[#064484]"

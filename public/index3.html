@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="min-h-screen m-0 text-base text-white flex items-center justify-around">
+    <div id="box" class="w-[500px] p-10 min-h-24 bg-white shadow-md mx-5 rounded-2xl ">
+
+
+
+        <div id="blue-box" class="bg-[#0b58a7] w-full text-white justify-between py-4 px-5 flex rounded-2xl text-xl">
+            <span>Score: <span id="score">0</span></span>
+            <span id="countdown" class="testNumber1">0</span>
+        </div>
+        <div class="">
+            <div class="active qa_set list">
+                <h4 class="mr-4 text-black py-3 text-lg md:text-2xl font-medium md:font-bold question">Hello, what
+                    ______ your
+                    name?</h4>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <span class="block px-4 py-2 md:text-base text-sm faq">
+                        A) is
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <span class="block px-4 py-2 md:text-base text-sm faq">
+                        B) are
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <span class="block px-4 py-2 md:text-base text-sm faq">
+                        C) am
+                    </span>
+                </div>
+                <div id="qa_ans_row"
+                    class="relative mb-2.5  bg-[#bad0c9] rounded-2xl transition-all hover:bg-[#9ab5ac]">
+                    <span class="block px-4 py-2 md:text-base text-sm faq">
+                        D) be
+                    </span>
+                </div>
+                <div class="hidden qa_set text-center">
+                    <h4 class="mr-4 text-black py-3 text-lg md:text-2xl font-medium md:font-bold">Siz <span
+                            class="totalScore">0
+                            to'pladingiz</span>100
+                        baldan</h4>
+                </div>
+            </div>
+            <div id="footer-button" class="pl-2.5 text-right">
+                <span
+                    class="inline-block py-2 px-5 bg-[#0b58a7] text-white rounded-2xl cursor-pointer transition-all hover:bg-[#064484]"
+                    id="skip">Skip</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/data3.js"></script>
+    <script src="js/app3.js"></script>
+</body>
+
+</html>
