@@ -530,6 +530,9 @@ video {
 .mb-4 {
   margin-bottom: 1rem;
 }
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -539,14 +542,8 @@ video {
 .mr-4 {
   margin-right: 1rem;
 }
-.mt-0 {
-  margin-top: 0px;
-}
 .mt-4 {
   margin-top: 1rem;
-}
-.mb-5 {
-  margin-bottom: 1.25rem;
 }
 .block {
   display: block;
@@ -668,6 +665,9 @@ video {
 }
 .p-5 {
   padding: 1.25rem;
+}
+.p-6 {
+  padding: 1.5rem;
 }
 .p-8 {
   padding: 2rem;
@@ -859,6 +859,10 @@ body {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:p-10 {
+    padding: 2.5rem;
   }
 
   .md\:text-2xl {
